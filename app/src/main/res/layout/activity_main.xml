@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="16dp"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingTop="30dp"
+    tools:context="com.example.coupon_advertiser.MainActivity">
+
+    <ImageButton
+        android:id="@+id/StartAdvButton"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/start"
+
+        android:layout_marginBottom="150dp"
+        android:layout_alignParentBottom="true"
+
+        tools:ignore="RtlSymmetry" />
+
+    <ImageButton
+        android:id="@+id/StopAdvButton"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:scaleType="centerInside"
+
+        android:layout_marginBottom="150dp"
+        android:layout_alignParentBottom="true"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/stop" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COUPON TITLE: "
+        android:layout_marginTop="25dp"
+        android:typeface="serif"
+        android:textSize="17sp"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/ettitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+
+        android:ems="10"
+        android:textSize="17sp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EXPIRY DATE: "
+        android:layout_marginTop="100dp"
+        android:typeface="serif"
+        android:textSize="17sp"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/etdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+
+        android:ems="10"
+        android:textSize="17sp"
+        android:textColor="#000000"
+        android:inputType="date"
+        android:hint="20200820"
+        tools:ignore="LabelFor" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COUPON CONTENTS: "
+        android:layout_marginTop="175dp"
+        android:typeface="serif"
+        android:textSize="17sp"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/etcoupon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+
+        android:ems="10"
+        android:textSize="17sp"
+        android:textColor="#000000"/>
+
+
+
+</RelativeLayout>
