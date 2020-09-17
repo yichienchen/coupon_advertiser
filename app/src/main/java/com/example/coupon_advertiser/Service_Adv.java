@@ -29,11 +29,9 @@ import static com.example.coupon_advertiser.MainActivity.total_data;
 
 public class Service_Adv extends Service {
     static int packet_num;
-    static int id_num;
     static int pdu_len;
 
     static byte[][] data_legacy;
-
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     public Service_Adv() {
@@ -52,14 +50,10 @@ public class Service_Adv extends Service {
         });
     }
 
-
-
     @Override
     public IBinder onBind(Intent intent) {
         throw new UnsupportedOperationException("Not yet implemented");
     }
-
-
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void startAdvertising(){
@@ -81,9 +75,6 @@ public class Service_Adv extends Service {
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void startBroadcast(Integer order) {
-        String localName =  String.valueOf(1) ;
-        BluetoothAdapter.getDefaultAdapter().setName(localName);
-
         AdvertiseSettings settings = buildAdvertiseSettings();
         AdvertiseData advertiseData = buildAdvertiseData(order);
         AdvertiseData scanResponse = buildAdvertiseData_scan_response(order);
@@ -156,15 +147,10 @@ public class Service_Adv extends Service {
             }
         }
 
-//        for (int counter = 0 ; counter <packet_num ; counter++) {
-//            Log.e(TAG,counter + " adv_byte: " + byte2HexStr(adv_byte[counter]));
-//        }
 
         return adv_byte;
     }
 
-
-    //BLE 4.0
     public static class MyAdvertiseCallback extends AdvertiseCallback {
         private final Integer _order;
         MyAdvertiseCallback(Integer order) {

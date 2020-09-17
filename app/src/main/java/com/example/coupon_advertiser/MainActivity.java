@@ -1,8 +1,5 @@
 package com.example.coupon_advertiser;
 
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothManager;
 import android.bluetooth.le.AdvertiseCallback;
@@ -10,7 +7,6 @@ import android.bluetooth.le.BluetoothLeAdvertiser;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,8 +14,9 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.math.BigInteger;
-import java.nio.ByteBuffer;
 import java.util.Map;
 import java.util.Random;
 import java.util.TreeMap;
@@ -28,7 +25,7 @@ import static com.example.coupon_advertiser.Service_Adv.byte2HexStr;
 
 public class MainActivity extends AppCompatActivity {
 
-    static String TAG = "chien";
+    static String TAG = "lab_605";
 
     static ImageButton startAdvButton,stopAdvButton;
 
